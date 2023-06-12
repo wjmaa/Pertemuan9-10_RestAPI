@@ -1,13 +1,10 @@
 package com.example.pertemuan9restapi.model.response
 
-
-import com.example.pertemuan9restapi.model.request.DataMahasiswa
 import com.google.gson.annotations.SerializedName
 
-data class ResponseDataMahasiswa(
+data class ResponseDeleteMahasiswa(
     @SerializedName("data")
-    val data: List<DataMahasiswa>,
+    val data: String,
     @SerializedName("status")
     val status: String
 )
-

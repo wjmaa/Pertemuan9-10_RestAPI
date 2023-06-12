@@ -1,4 +1,4 @@
-package com.app.latihanrestapi.model.request
+package com.example.pertemuan9restapi.model.request
 
 
 import com.google.gson.annotations.SerializedName

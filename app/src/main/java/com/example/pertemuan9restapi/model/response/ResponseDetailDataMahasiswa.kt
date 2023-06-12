@@ -1,7 +1,7 @@
-package com.app.latihanrestapi.model.response
+package com.example.pertemuan9restapi.model.response
 
 
-import com.app.latihanrestapi.model.request.DataDetailMahasiswa
+import com.example.pertemuan9restapi.model.request.DataDetailMahasiswa
 import com.google.gson.annotations.SerializedName
 
 data class ResponseDetailDataMahasiswa(

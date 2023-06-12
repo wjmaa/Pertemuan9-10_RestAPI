@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pertemuan9restapi.R
 import com.example.pertemuan9restapi.adapter.HomeAdapter
 import com.example.pertemuan9restapi.databinding.FragmentHomeBinding
 import com.example.pertemuan9restapi.viewmodel.ViewModelMahasiswa
@@ -27,7 +29,7 @@ class HomeFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewModel = ViewModelProvider(this).get(ViewModelMahasiswa::class.java)
+        viewModel = ViewModelProvider(this).get(ViewModelMahasiswa::class.java)
         viewModel.getDataMahasiswa().observe(viewLifecycleOwner) {
             if (it != null) {
                 binding.rvUser.layoutManager =
@@ -39,5 +41,9 @@ class HomeFragment : Fragment(){
             }
         }
         viewModel.showDataMahasiswa()
+
+        binding.btnAdd.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_tambahDataFragment)
+        }
     }
 }

@@ -18,5 +18,29 @@
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tambahDataFragment"
+            app:destination="@id/tambahDataFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahDataFragment"
+        android:name="com.example.pertemuan9restapi.view.tambah.TambahDataFragment"
+        android:label="fragment_tambah_data"
+        tools:layout="@layout/fragment_tambah_data" >
+        <action
+            android:id="@+id/action_tambahDataFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.pertemuan9restapi.view.update.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
